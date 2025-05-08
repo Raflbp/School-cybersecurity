@@ -1,0 +1,6 @@
+🦆 DuckWare - Análise e Exploração de HTTP Smuggling + Path Traversal
+
+> Autor: @Piceli
+
+Este write-up documenta a resolução de um desafio CTF proposto pelo coordenador @Pira que combina duas vulnerabilidades clássicas: **Path Traversal** e **HTTP Request Smuggling**. A proposta envolve acessar arquivos sensíveis fora da pasta pública, mesmo com a presença de um proxy reverso (Nginx) configurado para mitigar tais ataques.
+
