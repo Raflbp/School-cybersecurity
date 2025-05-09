@@ -1,4 +1,4 @@
-# Cookie Monster Secret Recipe 🟦 Grande (h1)
+# Cookie Monster Secret Recipe 
 
 > autor: Rafael Bruno 
 
