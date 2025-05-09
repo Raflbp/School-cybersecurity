@@ -15,7 +15,7 @@ O enunciado do desafio é o seguinte:
 
 Ao baixar e abrir o código, temos o seguinte script em Python:
 
-```python
+```[python
 import re
 import time
 
@@ -87,4 +87,118 @@ In the world wide labyrinth, we’re never lost.
 REFRAIN;
 
 Stack's overflowing, breaking the chain,
-ROP
+ROP gadget wizardry, ride it to fame.
+Heap spray in silence, memory's plight,
+Race the condition, crash it just right.
+Shellcode ready, smashing the frame,
+Control the instruction, flags call my name.
+
+REFRAIN;
+
+END;
+'''
+
+MAX_LINES = 100
+
+def reader(song, startLabel):
+    lip = 0
+    start = 0
+    refrain = 0
+    refrain_return = 0
+    finished = False
+
+    # Obtém a lista de linhas da música
+    song_lines = song.splitlines()
+
+    # Localiza o início, refrão e retorno
+    for i in range(len(song_lines)):
+        if song_lines[i] == startLabel:
+            start = i + 1
+        elif song_lines[i] == '[REFRAIN]':
+            refrain = i + 1
+        elif song_lines[i] == 'RETURN':
+            refrain_return = i
+
+    # Imprime as letras
+    line_count = 0
+    lip = start
+    while not finished and line_count < MAX_LINES:
+        line_count += 1
+        for line in song_lines[lip].split(';'):
+            if line == '' and song_lines[lip] != '':
+                continue
+            if line == 'REFRAIN':
+                song_lines[refrain_return] = 'RETURN ' + str(lip + 1)
+                lip = refrain
+            elif re.match(r"CROWD.*", line):
+                crowd = input('Crowd: ')
+                song_lines[lip] = 'Crowd: ' + crowd
+                lip += 1
+            elif re.match(r"RETURN [0-9]+", line):
+                lip = int(line.split()[1])
+            elif line == 'END':
+                finished = True
+            else:
+                print(line, flush=True)
+                time.sleep(0.5)
+                lip += 1
+
+reader(song_flag_hunters, '[VERSE1]')]
+
+```
+
+### Resolução
+
+```
+Analisando o codigo, se ve que a flag esta nesse trecho;
+
+    [secret_intro = \
+    '''Pico warriors rising, puzzles laid bare,
+    Solving each challenge with precision and flair.
+    With unity and skill, flags we deliver,
+    The ether’s ours to conquer, '''\
+    + flag + '\n']
+
+Analisando uma parte mais a baixo dele vemos que ele pede um RETUN
+
+    [[REFRAIN]
+    We’re flag hunters in the ether, lighting up the grid,
+    No puzzle too dark, no challenge too hid.
+    With every exploit we trigger, every byte we decrypt,
+    We’re chasing that victory, and we’ll never quit.
+    CROWD (Singalong here!);
+    RETURN]
+```
+
+Com isso, ao usar o nc para entrar no servidor
+
+```
+[$ nc verbal-sleep.picoctf.net 56688]
+```
+
+Vai imprimir parte da musica até que vai imprimir essa menssagem esperando algo
+
+```
+[Crowd:]
+```
+
+Ultilando o comando test;RETUN 0 a frente dessa menssagem, a kali vai imprimir mais parte da musica junto com a flag
+
+```
+[Crowd:test;RETUN 0]
+```
+
+### Resultado
+
+Com isso a fla esta nessa parte da musca
+\[We’re flag hunters in the ether, lighting up the grid,
+No puzzle too dark, no challenge too hid.
+With every exploit we trigger, every byte we decrypt,
+We’re chasing that victory, and we’ll never quit.
+Crowd: teste
+Pico warriors rising, puzzles laid bare,
+Solving each challenge with precision and flair.
+With unity and skill, flags we deliver,
+The ether’s ours to conquer, **picoCTF{70637h3r\_f0r3v3r\_75053bc3}**]
+
+corrija os erros de portugues e me devolva um codigo q eu possa copiar
