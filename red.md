@@ -28,7 +28,7 @@ sudo gem install zsteg
 
     usando o [dcode.fr](https://www.dcode.fr) procurando por **Cipher Identifier**. Ele irá te mostrar que o valor está em **Base64 Coding**
 
-### Resultado
+### conclusão 
 
     Ao converter a string, tera a flag
      
