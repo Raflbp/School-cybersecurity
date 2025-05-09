@@ -1,19 +1,23 @@
+# interencdec
 
-# interencdec 
-
-> autor: Rafael Bruno 
+> Autor: Rafael Bruno
 
 ## Desafio: Red
 
-### introdução 
-    Red é um desafio  de **florence** com o seguinte enuncuado [Red,Red,Red,Red] o desafio te entrega um Arquivo '.png' [] que é unicamente uma imagem em vermelho**. 
+### Introdução
 
-### Resolução 
-    
-    Abrindo o kali e usando o comando no terminal [sudo apt install ruby ruby-dev] e [sudo gem install zsteg] instalando o aplicativo [ruby  e ruby-dev] e [zsteg]
+Red é um desafio de **forense** com o seguinte enunciado:  
+**[Red, Red, Red, Red]**.  
+O desafio entrega um arquivo `.png` que é unicamente uma imagem vermelha.
 
-    Ainda no terminal se usando o comando 
-        [steg -a red.png ]
+### Resolução
+
+Abrindo o Kali Linux, utilizamos o terminal para instalar as dependências necessárias:
+
+```bash
+sudo apt install ruby ruby-dev
+sudo gem install zsteg
+
 
     Se analisa a imagem .png dando os resultados em vermelho 
     []
