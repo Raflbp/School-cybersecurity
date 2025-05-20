@@ -200,5 +200,3 @@ Pico warriors rising, puzzles laid bare,
 Solving each challenge with precision and flair.
 With unity and skill, flags we deliver,
 The ether’s ours to conquer, **picoCTF{70637h3r\_f0r3v3r\_75053bc3}**]
-
-corrija os erros de portugues e me devolva um codigo q eu possa copiar
