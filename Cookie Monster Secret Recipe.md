@@ -9,7 +9,7 @@
 ### Introdução 
 
  * Servidor Web HTML.
- * Objetivo encontrar a `flag.txt`** na página Web.
+ * Objetivo encontrar a `flag.txt` na página Web.
 
 O desafio nos forneceu um ponto crucial para analise:
  * Cookie dentro da inpeção de página
