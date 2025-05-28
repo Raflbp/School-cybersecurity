@@ -14,7 +14,11 @@ O desafio "Cookie Monster Secret Recipe" do picoCTF pertence à categoria de Web
 > A questão te entrega o seguinte enunciado:
 
 Clicando em **here**, entra-se nesse link
-[[![1.png](https://i.postimg.cc/765XbVZJ/1.png)](https://postimg.cc/9RjynyTc)]:  
+
+
+[![1.png](https://i.postimg.cc/765XbVZJ/1.png)](https://postimg.cc/9RjynyTc):  
+
+
 [http://verbal-sleep.picoctf.net:49737/](http://verbal-sleep.picoctf.net:49737/)
 
 Isso vai te levar até essa página
