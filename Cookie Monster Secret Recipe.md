@@ -22,7 +22,7 @@ Clicando em **here**, entra-se nesse link
 [http://verbal-sleep.picoctf.net:49737/](http://verbal-sleep.picoctf.net:49737/)
 
 Isso vai te levar até essa página
-[![2.png](https://i.postimg.cc/dQXpR7MK/2.png)](https://postimg.cc/MX79qpKs)[].
+[url=https://postimg.cc/8JPLGNyY][img]https://i.postimg.cc/8JPLGNyY/3.png[/img][/url].
 
 Com essa página aberta, clique com o botão direito em algum lugar da área em branco **ou pressione `Ctrl + Shift + I`** para abrir a aba de inspeção[[![3.png](https://i.postimg.cc/RFwdc0wv/3.png)](https://postimg.cc/8JPLGNyY)].
 
