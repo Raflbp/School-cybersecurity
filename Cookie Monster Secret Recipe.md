@@ -61,7 +61,7 @@ O desafio nos forneceu um ponto crucial para analise:
 ###  Decodificação
 * Utilizando o mesmo site para descriptografar, será exposta a **flag**
   
-[![4.png](https://i.postimg.cc/7L00RWhV/4.png)](https://postimg.cc/8Fk7JwhJ).
+[![4.png](https://i.postimg.cc/7L00RWhV/4.png)](https://postimg.cc/8Fk7JwhJ)
 
 -------
 
