@@ -1,8 +1,9 @@
-# Flag Hunters
+# 🏴‍☠️ Flag Hunters
 
 > Autor: Rafael Bruno
 
-## Desafio: Engenharia Reversa
+----------
+## 💡 Desafio: Engenharia Reversa
 
 ### Introdução
 
@@ -10,7 +11,7 @@
 
 O enunciado do desafio é o seguinte:
 
-> "Lyrics jump from verses to the refrain kind of like a subroutine call. There's a hidden refrain this program doesn't print by default. Can you get it to print it? There might be something in it for you. The program's source code can be downloaded **here**. Connect to the program with netcat:  
+> "Lyrics jump from verses to the refrain kind of like a subroutine call. There's a hidden refrain this program doesn't print by default. Can you get it to print it? There might be something in it for you. The program's source code can be downloaded here. Connect to the program with netcat:
 > `$ nc verbal-sleep.picoctf.net 56688`"
 
 Ao baixar e abrir o código, temos o seguinte script em Python:
@@ -147,7 +148,9 @@ reader(song_flag_hunters, '[VERSE1]')]
 
 ```
 
-### Resolução
+## 🛠️ Resolução
+
+* Analisando o código, percebemos que a flag está definida na variável flag, que é lida diretamente do arquivo flag.txt. Ela é concatenada dentro da variável secret_intro:
 
 ```
 Analisando o codigo, se ve que a flag esta nesse trecho;
@@ -170,27 +173,32 @@ Analisando uma parte mais a baixo dele vemos que ele pede um RETUN
     RETURN]
 ```
 
-Com isso, ao usar o nc para entrar no servidor
+--------
+## 🧪 Execução com Netcat
+
+* Com isso, ao usar o nc para entrar no servidor
 
 ```
 [$ nc verbal-sleep.picoctf.net 56688]
 ```
 
-Vai imprimir parte da musica até que vai imprimir essa menssagem esperando algo
+* Vai imprimir parte da musica até que vai imprimir essa menssagem esperando algo
 
 ```
 [Crowd:]
 ```
 
-Ultilando o comando test;RETUN 0 a frente dessa menssagem, a kali vai imprimir mais parte da musica junto com a flag
+* Ultilando o comando test;RETUN 0 a frente dessa menssagem, a kali vai imprimir mais parte da musica junto com a flag
 
 ```
 [Crowd:test;RETUN 0]
 ```
 
-### Resultado
+## 🏁 Resultado
 
-Com isso a fla esta nessa parte da musca
+* A flag estará presente nesta parte da música:
+
+``` bash
 \[We’re flag hunters in the ether, lighting up the grid,
 No puzzle too dark, no challenge too hid.
 With every exploit we trigger, every byte we decrypt,
@@ -199,4 +207,15 @@ Crowd: teste
 Pico warriors rising, puzzles laid bare,
 Solving each challenge with precision and flair.
 With unity and skill, flags we deliver,
-The ether’s ours to conquer, **picoCTF{70637h3r\_f0r3v3r\_75053bc3}**]
+The ether’s ours to conquer, picoCTF{70637h3r\_f0r3v3r\_75053bc3}
+```
+-------
+
+## ✅ Conclusão
+Este desafio mostra de forma criativa como explorar fluxos de execução e entradas interativas em scripts. Ao injetar um comando controlado no ponto de entrada do usuário (Crowd:), conseguimos manipular o programa para revelar a flag escondida.
+
+Técnicas como esta são comuns em desafios de engenharia reversa, e destacam a importância de entender fluxo de execução, interação dinâmica e compreensão de código-fonte.
+
+``` bash
+picoCTF{70637h3r\_f0r3v3r\_75053bc3}
+```
