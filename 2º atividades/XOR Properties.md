@@ -65,13 +65,13 @@ Resultado armazenado:
 1. Altere a chave do XOR para o resultado obtido acima.
 2. Use como entrada **CHAVE2 ^ CHAVE3**:
 
+[![Imagem](https://i.postimg.cc/jSpDVRmw/Captura-de-tela-2025-06-05-193603.png)](https://postimg.cc/dh9srcqw)
+
+Resultado armazenado:
+
 ```
 50 40 53 b7 57 ea fd 3d 70 9d 63 39 b1 40 e0 3d 98 b9 fe 62 b8 4a dd 03 32 cc
 ```
-
-[![Imagem](https://i.postimg.cc/jSpDVRmw/Captura-de-tela-2025-06-05-193603.png)](https://postimg.cc/dh9srcqw)
-
-Resultado armazenado.
 
 ### Etapa 3: Resolver sinalizador final
 
